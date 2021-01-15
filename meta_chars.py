@@ -19,11 +19,13 @@ for x in re.finditer(r'a+b+c+',s) :
 # { } Exactly the specified number of occurrences "al{2}"
 for x in re.finditer(r'.{4}',s) :
     print(x)
-# [] a set of caracteres "[a-m]"
-for x in re.finditer(r'[a-c]',s):
+# [] a set of caracteres "[a-m]" "[a-zA-c0-7]"
+for x in re.finditer(r'[a-c]',s) :
     print(x)
 # \ special sequence or caracter "\d"
-    #in special.py
+for x in re.finditer(r'\.','.aa') :
+    print(x) 
+    # in special.py
 # | Either or "a|b"
 for x in re.finditer(r'a|b',s) :
     print(x)
